@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/script.js" type="text/javascript" defer></script>
+    <script src="js/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <section class="titulo-inicial" id="titulo1">
+      <h1 class="titulo">LAS MATES CON MATEO</h1>
+      <h2 class="subtitulo">
+        Aprender las matematicas son mas divertidas con Mateo
+      </h2>
+    </section>
+    <section class="inicio" id="inicio" hidden>
+      <img class="imagen_principal" src="./img/mateo-operacionesm.png" />
+      <p class="operacion">Elige que vamos a aprender:</p>
+      <select name="" id="operacion" class="categoria">
+        <option value="suma" selected>Suma</option>
+        <option value="resta">Resta</option>
+        <option value="division">División</option>
+        <option value="multiplicacion">Multiplicación</option>
+      </select>
+      <p class="figura">Elige la figura para practicar:</p>
+      <select name="" id="figura" class="categoria">
+        <option value="auto">Auto</option>
+        <option value="auto2">Auto 2</option>
+        <option value="hot-dog">Hot Dog</option>
+        <option value="mariposa">Mariposa</option>
+        <option value="tortuga">Tortuga</option>
+        <option value="pinguino">Pinguino</option>
+        <option value="perro">Perro</option>
+        <option value="microfono">Microfono</option>
+        <option value="leon">León</option>
+        <option value="gato">Gato</option>
+        <option value="pez">Pez</option>
+        <option value="aguila">Aguila</option>
+        <option value="dado" selected>Dado</option>
+        <option value="manzana">Manzana</option>
+        <option value="regalo">Regalo</option>
+        <option value="hipopotamo">Hipopotamo</option>
+      </select>
+
+      <input
+        id="btnIniciar"
+        class="btn-iniciar"
+        type="submit"
+        value="Empezar"
+      />
+    </section>
+    <section id="contenedor_operacion">
+      <section class="contenedor_opciones">
+        <section class="opcion-numero" hidden id="opcion-numero">
+          <p class="texto-opcion">Elige un numero:</p>
+          <select name="" id="numOpcion" class="num-opcion">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </section>
+        <select name="" id="opcion" class="opcion" hidden>
+          <option value="aprender" selected>Aprender</option>
+          <option value="practicar">Practicar</option>
+        </select>
+      </section>
+      <section id="juego" hidden>
+        <section class="pizarra">
+          <div class="num1" id="num1"></div>
+          <div class="operador" id="operador">+</div>
+          <div class="num2" id="num2"></div>
+          <div class="igual" id="igual">=</div>
+          <span class="resultado" id="resultado">0</span>
+        </section>
+        <div class="btnJuego">
+          <button class="btnRepetir" id="btnRepetir">Repetir</button>
+          <button class="btnSiguiente" id="btnSiguiente">Siguiente</button>
+        </div>
+
+        <section class="imagen-contedor">
+          <div class="container">
+            <div class="imagenes" id="imagenes">
+              <div class="imagenNum1" id="imagenNum1"></div>
+              <div class="operador" id="operador1">+</div>
+              <div class="imagenNum2" id="imagenNum2"></div>
+              <div class="igual" id="igual">=</div>
+              <span class="resultadoImagen" id="resultadoImagen"></span>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="practicar" hidden>
+        <div class="info">
+          <h3 id="mal">te qu</h3>
+          <h1 id="msg-final"></h1>
+          <h3 id="acierto">muy bien!</h3>
+        </div>
+        <section class="practicar_contenedor">
+          <form class="form" id="form">
+            <h4 class="score" id="score">Puntuje: 0</h4>
+
+            <h1 class="pregunta" id="pregunta">
+              ¿Cuanto es 1 multiplicado por 1?
+            </h1>
+            <input
+              type="text"
+              class="input"
+              id="input"
+              placeholder="Ingres tu respuesta"
+              required
+              title="Ingresa solo Numeros"
+              pattern="[0-9]+"
+              autofocus
+              autocomplete="off"
+            />
+            <input
+              type="submit"
+              id="enviar"
+              class="btn"
+              value="Enviar Respuesta"
+            />
+          </form>
+          <section>
+            <div class="practicar_ejemplo">
+              <span
+                class="resultadoPracticaImagen"
+                id="resultadoPracticaImagen"
+              ></span>
+              <div
+                class="resultadoImagenesPractica"
+                id="resultadoImagenesPractica"
+              ></div>
+            </div>
+          </section>
+        </section>
+      </section>
+      <div id="home" hidden>
+        <button class="btn_home" id="btnHome">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            viewBox="1 2 24 24"
+          >
+            <path
+              fill="#ffffff"
+              d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+    <footer>
+      <div class="copyright">
+        <p class="autor">
+          &copy; Realizado por: <b class="usuario">Roman Romero C.</b>
+        </p>
+        <div class="redes">
+          <a href="https://github.com/roman026" target="_blank" rel="noreferrer"
+            ><iconify-icon
+              icon="akar-icons:github-fill"
+              width="25"
+              height="25"
+            ></iconify-icon
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/roman026"
+            target="_blank"
+            rel="noreferrer"
+            ><iconify-icon
+              icon="logos:linkedin-icon"
+              width="25"
+              height="25"
+            ></iconify-icon
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

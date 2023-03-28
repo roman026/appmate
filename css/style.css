@@ -1,0 +1,685 @@
+/* ****** Reset CSS ****** */
+
+:root {
+  --main-font: sans-serif;
+  --font-size: 16px;
+  --main-color: #f3f5fc;
+  --second-color: #222;
+  --main-modal-color: rgba(247, 222, 30, 0.85);
+  --second-modal-color: rgba(34, 34, 34, 0.85);
+  --container-width: 1200px;
+}
+
+html {
+  /*   background-image: url(../img/fondo2.jpg);
+  background-size: cover; */
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #80d0c7 0%, #0093e9 100%);
+
+  /* background-color: var(--main-color);*/
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  padding-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 72vh;
+  text-align: center;
+  align-content: center;
+}
+
+.imagen_principal {
+  z-index: -1;
+  position: fixed;
+  opacity: 0.5;
+}
+
+.titulo {
+  font-size: 1.7rem;
+  text-align: center;
+  color: white;
+  font-family: "Raleway";
+
+  text-shadow: -1px -1px 3px #999, 0 0 1px darkred, 1px 1px 1px red,
+    2px 2px 1px #555, 3px 3px 1px #222, 4px 4px 1px #000;
+  /* text-shadow: 1px 1px white, -1px -1px white; */
+}
+.subtitulo {
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #464646;
+  font-family: "Raleway";
+  text-align: center;
+  text-shadow: 1px 1px 2px white;
+}
+.operacion {
+  font-size: 1.3rem;
+  padding: 16px 0px;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-shadow: 2px 2px 3px white;
+}
+
+.figura {
+  padding: 3rem 0 1rem;
+  font-size: 1.3rem;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-shadow: 2px 2px 3px white;
+}
+.btn-iniciar {
+  width: 180px;
+  height: 50px;
+  margin-top: 9rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: transparent linear-gradient(180deg, #38b000 0, #008000) repeat
+    scroll 0 0;
+  border: 1px solid #008000;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px 0 #333;
+  text-shadow: 2px 1px 0 #008000;
+  color: #fff;
+  font-family: Oswald, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif !important;
+}
+.btn-iniciar:hover {
+  background: transparent linear-gradient(0deg, #38b000 0, #008000) repeat
+    scroll 0 0;
+  transition: 0.5s ease-in-out;
+}
+
+.inicio,
+p {
+  color: var(--second-color);
+  padding-top: 16px;
+}
+.categoria {
+  width: 317px;
+  height: 30px;
+
+  border-radius: 10px;
+}
+.logo {
+  position: fixed;
+  z-index: 999;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.texto-opcion {
+  font-weight: 600;
+}
+.opcion-numero {
+  display: none;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0.5rem 0;
+}
+
+.num-opcion {
+  width: 65px;
+  height: 25px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  margin-left: 4px;
+}
+.contenedor_opciones {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.opcion {
+  width: 120px;
+  height: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  /*   margin: 13px 45px 0 auto; */
+}
+.pizarra {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+}
+.num1,
+.operador,
+.num2,
+.igual,
+.resultado {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.resultadoImagen,
+.imagenNum1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btnSiguiente {
+  padding: 0;
+  width: 200px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 auto;
+  background: transparent linear-gradient(180deg, #ff3f00 0, #d93600) repeat
+    scroll 0 0;
+  border: 1px solid #c30;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px 0 #333;
+  text-shadow: 2px 1px 0 #d93600;
+  color: #fff;
+  font-family: Oswald, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif !important;
+  cursor: pointer;
+}
+.btnSiguiente:hover {
+  background: transparent linear-gradient(0deg, #ff3f00 0, #d93600) repeat
+    scroll 0 0;
+  transition: 0.5s ease-in-out;
+}
+
+.deshalititar {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url("./img/closet.svg");
+  border: 0.5px solid #999;
+  text-align: center;
+  height: 2.6rem;
+  font-size: 25px;
+  font-weight: bolder;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px 2px rgba(153, 153, 153, 1);
+}
+
+.btnRepetir {
+  padding: 0;
+  width: 120px;
+  height: 40px;
+  gap: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 auto;
+  background: transparent linear-gradient(180deg, #999 0, #777);
+  border: 1px solid #777;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px 0 #333;
+  text-shadow: 2px 1px 0 #777;
+  color: #fff;
+  cursor: pointer;
+}
+.btnRepetir:hover {
+  background: transparent linear-gradient(0deg, #999 0, #777);
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+
+.info {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+}
+#acierto {
+  min-height: 25px;
+  font-size: 30px;
+  transform: scale(0);
+}
+#mal {
+  min-height: 25px;
+  font-size: 30px;
+  transform: scale(0);
+}
+#msg-final {
+  text-align: center;
+  margin: 0;
+  transition: all 0.5s ease;
+  transform: scale(0);
+  min-height: 16px;
+  margin-bottom: 0;
+}
+
+.zoom-in {
+  transform: scale(0.8) !important;
+}
+
+.msg-final {
+  animation: zoomInOut 1s ease;
+}
+.acierto {
+  animation: zoomInOut 1s ease;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.rojo {
+  color: red;
+}
+.verde {
+  color: forestgreen;
+}
+.canvas {
+  display: flex;
+  width: 27%;
+}
+
+.oculta {
+  margin: 15px auto 0 auto;
+  text-align: center;
+  color: royalblue;
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.escena {
+  display: grid;
+  margin: 0 auto 0 auto;
+  top: auto;
+  left: auto;
+}
+.escena2 {
+  margin: 0 auto 0 auto;
+}
+
+.btnJuego {
+  display: flex;
+  flex-direction: row;
+  margin: 15px auto 0 auto;
+  padding: 0;
+
+  gap: 1rem;
+}
+
+.container {
+  /*max-width: 70%;*/
+  margin: 1.5vh auto 0 auto;
+}
+
+.imagenes {
+  background-color: rgb(153, 190, 221);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin: 8px;
+  padding-top: 8px;
+}
+
+.resultadoImagen {
+  width: 20%;
+}
+
+.imagenNum1,
+.imagenNum2 {
+  width: 30%;
+  height: 48vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(2.6rem, 1fr));
+  align-content: center;
+  justify-items: center;
+  gap: 0.6rem;
+}
+
+.imagenNum1.active {
+  grid-template-columns: minmax(2.6rem, 1fr);
+  text-align: center;
+}
+
+.letra,
+.espacio {
+  border: 0.5px solid #999;
+  text-align: center;
+  height: 2.6rem;
+  font-size: 24px;
+  font-weight: bolder;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px 2px rgba(153, 153, 153, 1);
+  cursor: pointer;
+}
+
+.resultadoTotal {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.copyright {
+  display: flex;
+
+  height: 4vh;
+  align-items: center;
+  justify-content: center;
+}
+.autor {
+  height: 2vh;
+  padding-top: 10px;
+  margin: 0 15px 0 15px;
+}
+.redes {
+  height: 2vh;
+  font-size: 2rem;
+  margin-right: 4rem;
+}
+iconify-icon {
+  margin-left: 20px;
+}
+
+/******************Seccion practicar ************/
+.practicar_contenedor {
+  margin: 0;
+  display: flex;
+  height: 50vh;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  flex-direction: column;
+}
+
+.pregunta {
+  font-size: 1.2em;
+}
+
+.form {
+  background-color: #e0e1dd;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin: 8px;
+}
+.input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  border: solid 3px green;
+  color: green;
+}
+.input::placeholder {
+  color: gray;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  margin: 20px 0;
+  background: transparent linear-gradient(180deg, #38b000 0, #008000) repeat
+    scroll 0 0;
+  border: 1px solid #008000;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px 0 #333;
+  text-shadow: 2px 1px 0 #008000;
+  color: #fff;
+  font-family: Oswald, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif !important;
+
+  cursor: pointer;
+}
+.btn:hover {
+  background: transparent linear-gradient(0deg, #38b000 0, #008000) repeat
+    scroll 0 0;
+  transition: 0.5s ease-in-out;
+  /* filter: brightness(0.9); */
+}
+
+.score {
+  color: green;
+  text-align: right;
+  margin: 0;
+}
+
+.resultadoImagenesPractica {
+  width: 100%;
+  display: table;
+  gap: 0.3rem;
+  align-content: center;
+  align-items: center;
+}
+.resultadoPracticaImagen {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+.imagenPractica {
+  display: table-row;
+  grid-template-columns: repeat(auto-fill, minmax(1.5rem, 1fr));
+  align-content: center;
+  justify-items: center;
+  border: 1px solid rgba(153, 153, 153, 1);
+  margin: 0 auto;
+  gap: 0.3rem;
+}
+.imagenPracticaRS {
+  display: flex;
+  align-content: center;
+  justify-items: center;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px 2px rgba(153, 153, 153, 1);
+  margin: 0 auto;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.operadorImagenRS {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.imagenP {
+  /* border: 0.5px solid #999; */
+  border-bottom: 1px solid rgba(153, 153, 153, 1);
+  text-align: center;
+  height: 2rem;
+  font-size: 24px;
+  font-weight: bolder;
+  /* border-radius: 6px;
+  box-shadow: 0px 0px 5px 2px rgba(153, 153, 153, 1); */
+}
+.operadorImagen {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+iconify-icon {
+  margin-right: 20px;
+}
+
+.practicar_ejemplo {
+  display: flex;
+  width: 95vw;
+  flex-direction: column;
+  background-color: #e0e1dd;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  margin: 8px;
+}
+.copyright {
+  position: fixed;
+  bottom: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_home {
+  position: fixed;
+  z-index: 999;
+  bottom: 2vh;
+  right: 2vw;
+  cursor: pointer;
+  padding: 4px;
+  height: 54px;
+  width: 54px;
+  opacity: 0.6;
+  background: transparent linear-gradient(180deg, #ffdd00 0, #a63c06) repeat
+    scroll 0 0;
+  border: 1px solid #a63c06;
+  box-shadow: 1px 1px 4px 0 #333;
+  border-radius: 100px;
+}
+.btn_home:hover {
+  background: transparent linear-gradient(0deg, #ffdd00 0, #a63c06) repeat
+    scroll 0 0;
+}
+.btn_home svg {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    position: absolute;
+    z-index: 999;
+    margin-top: 8px;
+    margin-left: 6px;
+  }
+  .canvas-conteiner {
+    display: flex;
+    margin: 10px auto 0 auto;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-wrap: nowrap;
+  }
+  .info {
+    width: 100%;
+    display: flex;
+    height: 45px;
+    align-items: center;
+  }
+  .mal {
+    font-size: 1.5em;
+    margin-left: 8px;
+    width: 50%;
+    justify-items: center;
+    text-align: center;
+  }
+  #msg-final {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(243, 245, 252, 0.7);
+    text-align: center;
+    margin: 0;
+    transition: all 0.5s ease;
+    transform: scale(0);
+    min-height: 16px;
+    top: 50px;
+    width: 301px;
+    left: auto;
+    margin-left: 50px;
+  }
+  .hide {
+    display: none;
+  }
+  .imagenes {
+    flex-direction: row;
+  }
+
+  .acierto {
+    width: 50%;
+    font-size: 1.5em;
+    justify-content: center;
+    text-align: center;
+  }
+  .canvas {
+    display: block;
+    width: 50%;
+    margin: auto;
+  }
+  .btnNuevo,
+  .btnDesistir {
+    width: auto;
+  }
+  .container {
+    max-width: 95%;
+  }
+  .copyright {
+    display: flex;
+    height: 6vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    align-content: space-around;
+  }
+  .resultadoImagenesPractica {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    align-content: center;
+    align-items: center;
+  }
+  .imagenPractica {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(2rem, 1fr));
+    align-content: center;
+    justify-items: center;
+
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+}
