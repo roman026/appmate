@@ -1020,7 +1020,7 @@ const practicarMultiplicacion = () => {
   }
 
   $puntajeEl.innerText = `Puntuaje: ${puntajeMultiplicacion}`;
-  $pregunta.innerText = `¿Cuantos es ${num1M} mulplicado por ${num2M}? `;
+  $pregunta.innerText = `¿Cuantos es ${num1M} multiplicado por ${num2M}? `;
 
   respCorrecta = num1M * num2M;
   dibujarRespuestaMult();
