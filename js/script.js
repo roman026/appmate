@@ -840,7 +840,7 @@ let numRS = 1;
 const practicarSuma = () => {
   $inputEl.value = "";
   num2S = Math.ceil(Math.random() * 10);
-  num1S = Math.ceil(Math.random() * numRS);
+  num1S = numRS /*Math.ceil(Math.random() * numRS)*/;
   puntajeSuma = JSON.parse(localStorage.getItem("puntajeSuma"));
 
   if (!puntajeSuma) {
@@ -892,7 +892,7 @@ let puntajeResta = 0;
 const practicarResta = () => {
   $inputEl.value = "";
   num1R = Math.ceil(Math.random() * 20);
-  num2R = Math.ceil(Math.random() * num1R);
+  num2R = num1R /* Math.ceil(Math.random() * num1R)*/;
 
   puntajeResta = JSON.parse(localStorage.getItem("puntajeResta"));
 
@@ -946,7 +946,7 @@ let puntajeDivision = 0;
 const practicarDivision = () => {
   $inputEl.value = "";
   num1D = Math.ceil(Math.random() * 10);
-  num2D = Math.ceil(Math.random() * numRD);
+  num2D = numRD /* Math.ceil(Math.random() * numRD)*/;
   num1D = num1D * num2D;
 
   /* if (num2R > num1R) {
@@ -1009,7 +1009,7 @@ let num2MR = 10;
 const practicarMultiplicacion = () => {
   $inputEl.value = "";
   num2M = Math.ceil(Math.random() * num1MR);
-  num1M = Math.ceil(Math.random() * num2MR);
+  num1M = num2MR /*Math.ceil(Math.random() * num2MR)*/;
 
   puntajeMultiplicacion = JSON.parse(
     localStorage.getItem("puntajeMultiplicacion")
